@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+@mixin yxcenter($bgColor, $width, $height) {
+    background: $bgColor;
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top:  $width / -2; /* metade da altura */
+    margin-left: $height / -2; /* metade da largura */
+}
+
+#yxcenter {
+    @include yxcenter(red, 200px, 150px);
+}
